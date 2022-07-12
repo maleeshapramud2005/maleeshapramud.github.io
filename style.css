@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #1E1F21;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+.flexbox-center {
+    align-items: center;
+}
+.row {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.img-fluid {
+    width: 100%;
+}
+.container {
+    padding-top: 120px;
+}
+.tac{
+    text-align: center;
+}
+.img-center {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 14%;
+    border-radius: 50%;
+  }
+.header-1 {
+    color: #86C232;
+    font-weight: 400;
+}
+.header-2 {
+    color: white;
+    font-size: calc(1.475rem + 1.4vw);
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+.p1 {
+    color: #6B6E70;
+    font-size: calc(1rem + .1vw);
+    font-weight: 300;
+    padding-bottom: 20px;
+
+}
+.col-6 {
+    width: 50%;
+}
+.p2 {
+    padding-left: 15px;
+    color: #6B6E70;
+    font-size: calc(1rem + .6vw);
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+.container2 {
+    padding-top: 120px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.s-icon {
+    padding-left: 20px;
+    font-size: 50px;
+}
+#contactme {
+    padding-top: 120px;
+}
+a {
+    color: inherit;
+}
+@media screen and (max-width: 500px) {
+    #home {
+        padding-top: 110px;
+    }
+    #aboutme {
+        padding-top: 110px;
+    }
+    .s-icon {
+        font-size: 35px;
+        padding-left: 15px;
+    }
+}
