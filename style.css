@@ -17,9 +17,6 @@ body {
 .img-fluid {
     width: 100%;
 }
-.container {
-    padding-top: 120px;
-}
 .tac{
     text-align: center;
 }
@@ -29,11 +26,11 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 14%;
+    width: 20%;
     border-radius: 50%;
   }
 .header-1 {
-    color: #86C232;
+    color: #20C20E;
     font-weight: 400;
 }
 .header-2 {
@@ -52,6 +49,7 @@ body {
 .col-6 {
     width: 50%;
 }
+
 .p2 {
     padding-left: 15px;
     color: #6B6E70;
@@ -74,7 +72,7 @@ body {
 a {
     color: inherit;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 599.98px) {
     #home {
         padding-top: 110px;
     }
@@ -85,4 +83,76 @@ a {
         font-size: 35px;
         padding-left: 15px;
     }
+    .bottom-margin {
+        margin-bottom: 25px;
+    }
+    .img-center {
+        width: 35%;
+    }
+    .container {
+        padding-top: 7%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+}
+@media (min-width: 600px) and (max-width: 749.98px) {
+    #home {
+        padding-top: 20%;
+        padding-bottom: 20%;
+    }
+    .img-center {
+        width: 25%;
+    }
+}
+@media (min-width: 750px) and (max-width: 899.98px) {
+    #home {
+        padding-top: 16%;
+        padding-bottom: 16%;
+    }
+    .img-center {
+        width: 25%;
+    }
+}
+@media (min-width: 900px) and (max-width: 1089.98px) {
+    #home {
+        padding-top: 11%;
+        padding-bottom: 11%;
+    }
+    .img-center {
+        width: 25%;
+    }
+}
+@media (min-width: 1090px) and (max-width: 1299.98px) {
+    #home {
+        padding-top: 6%;
+        padding-bottom: 6%;
+    }
+    .img-center {
+        width: 25%;
+    }
+}
+@media (min-width: 1300px) and (max-width: 1399.98px) {
+    #home {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .img-center {
+        width: 20%;
+    }
+}
+@media (min-width: 1400px) {
+    #home {
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+}
+
+.red {
+    color: red;
+}
+.green {
+    color: #20C20E;
+    font-family: Courier;
+    font-size: larger;
 }
