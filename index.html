@@ -8,7 +8,31 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/58cb4002a7.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload="choice()">
+    <div class="choice">
+        <div class="two_choices tac">
+            <p class="fs-1" id="date" style="font-weight: bolder;"><span></span></p>
+            <p class="fs-2" style="font-weight: bolder;">It's <span id="hours"></span>:<span id="mins"></span></p>
+            <div class="line"></div>
+            <p class="fs-1 fs-italic" style="font-weight: bolder;">
+                What light mode do you prefer ?
+            </p>
+            <div class="row justify-content-evenly flexbox-center" style="margin-top: 50px;">
+                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-10 col-10">
+                    <button class="light">
+                        Light mode
+                    </button>
+                </div>
+                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-10 col-10">
+                    <button class="dark">
+                        Dark mode
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <section id="home">
         <div class="container">
             <h3 class="header-1 tac">
@@ -31,17 +55,17 @@
             <h3 class="header-1 tac">
                 about me
             </h3>
-            <div class="row flexbox-center">
+            <div class="row flexbox-center" style="padding-top: 50px;">
                 <div class="col-6 col-12">
                     <img src="myb.jpg" class="img-fluid bottom-margin" alt="">
                 </div>
                 <div class="col-6 col-12">
                     <p class="p2">
-                        In my free time, I host a personal blog site and update this website with new themes. I love making new stuff. I have made some web sites and this is also my hand written and design website. <br><br> That's about it for now. If you want more information, click though below social media icons. <br> See ya around. Peace !
+                        In my free time, I host a personal blog site and update this website with new themes. I love making new stuff. I have made some web sites and this is also my self-written and designed website. <br><br> That's about it for now. If you want more information, click though below social media icons. <br> See ya around. Peace !
                     </p>
                     <div>
                         <a href="https://whatsapp.com"><i class="fa-brands fa-whatsapp-square s-icon"></i></a>
-                        <a href="https://facebook.com/"><i class="fa-brands fa-facebook s-icon"></i></a>
+                        <a href="https://facebook.com/maleeshapramud"><i class="fa-brands fa-facebook s-icon"></i></a>
                         <a href="https://instagram.com/maleesha_pramu"><i class="fa-brands fa-instagram-square s-icon"></i></a>
                         <a href="https://twitter.com/KLMpramud"><i class="fa-brands fa-twitter-square s-icon"></i></a>
                     </div>
@@ -49,8 +73,6 @@
             </div>
         </div>
     </section>
-    <section id="contactme">
-        
-    </section>
+    <script src="script.js"></script>
 </body>
 </html>

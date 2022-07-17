@@ -5,14 +5,17 @@
 body {
     background-color: #1E1F21;
     font-family: "Segoe UI", Arial, sans-serif;
+    overflow-x: hidden;
 }
 .flexbox-center {
     align-items: center;
 }
 .row {
-    padding-top: 50px;
     display: flex;
     flex-wrap: wrap;
+}
+.justify-content-evenly {
+    justify-content: space-evenly;
 }
 .img-fluid {
     width: 100%;
@@ -20,13 +23,32 @@ body {
 .tac{
     text-align: center;
 }
+.fs-1 {
+    font-size: calc(1.375rem + 1.5vw)
+}
+.fs-2 {
+    font-size: calc(1.325rem + 0.9vw)
+}.fs-3 {
+    font-size: calc(1.3rem + 0.6vw)
+}.fs-4 {
+    font-size: calc(1.275rem + 0.3vw)
+}.fs-5 {
+    font-size: 1.25rem;
+}
+.fs-6 {
+    font-size: 1rem;
+}
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
 .img-center {
     padding-top: 20px;
     padding-bottom: 20px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 20%;
+    width: 35%;
     border-radius: 50%;
   }
 .header-1 {
@@ -43,7 +65,6 @@ body {
     color: #6B6E70;
     font-size: calc(1rem + .1vw);
     font-weight: 300;
-    padding-bottom: 20px;
 
 }
 .col-6 {
@@ -57,96 +78,33 @@ body {
     font-weight: 300;
     padding-bottom: 20px;
 }
-.container2 {
-    padding-top: 120px;
+/* .container2 {
     padding-left: 15px;
     padding-right: 15px;
-}
+} */
 .s-icon {
-    padding-left: 20px;
-    font-size: 50px;
+    padding-left: 0.3em;
+    font-size: 2.5em;
 }
-#contactme {
+/* #contactme {
     padding-top: 120px;
-}
+} */
 a {
     color: inherit;
 }
-@media screen and (max-width: 599.98px) {
-    #home {
-        padding-top: 27%;
-    }
-    #aboutme {
-        padding-top: 110px;
-    }
-    .s-icon {
-        font-size: 35px;
-        padding-left: 15px;
-    }
-    .bottom-margin {
-        margin-bottom: 25px;
-    }
-    .img-center {
-        width: 35%;
-    }
+
+/* @MEDIAS */
+@media screen and (max-width: 767.98px) {
     .container {
-        padding-top: 7%;
+        width: 80vw;
     }
     .col-12 {
         width: 100%;
+        margin-bottom: 10px;
     }
 }
-@media (min-width: 600px) and (max-width: 749.98px) {
-    #home {
-        padding-top: 20%;
-        padding-bottom: 20%;
-    }
-    .img-center {
-        width: 25%;
-    }
-}
-@media (min-width: 750px) and (max-width: 899.98px) {
-    #home {
-        padding-top: 16%;
-        padding-bottom: 16%;
-    }
-    .img-center {
-        width: 25%;
-    }
-}
-@media (min-width: 900px) and (max-width: 1089.98px) {
-    #home {
-        padding-top: 11%;
-        padding-bottom: 11%;
-    }
-    .img-center {
-        width: 25%;
-    }
-}
-@media (min-width: 1090px) and (max-width: 1299.98px) {
-    #home {
-        padding-top: 6%;
-        padding-bottom: 6%;
-    }
-    .img-center {
-        width: 25%;
-    }
-}
-@media (min-width: 1300px) and (max-width: 1399.98px) {
-    #home {
-        padding-top: 5%;
-        padding-bottom: 5%;
-    }
-    .img-center {
-        width: 20%;
-    }
-}
-@media (min-width: 1400px) {
-    #home {
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
-}
+
+
 
 .red {
     color: red;
@@ -155,4 +113,77 @@ a {
     color: #20C20E;
     font-family: Courier;
     font-size: larger;
+}
+
+
+
+.choice {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.474);
+}
+.two_choices {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    border-radius: 10px;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    box-shadow: 3px 4px 8px 3px black;
+}
+.line {
+    background-color: black;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 5px;
+}
+
+.light {
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 3px solid black;
+    background: none;
+    border-radius: 5px;
+}
+.dark {
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: black;
+    color: white;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+#home {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#aboutme {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+.container2 {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
 }
