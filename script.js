@@ -32,6 +32,7 @@ document.querySelector(".light").addEventListener("click", function() {
   document.querySelector(".p2").style.fontWeight = "600"
   document.querySelector(".s-icon").style.color = "#01FEFF"
   document.querySelector(".down").style.borderColor = "#01FEFF"
+  document.querySelector(".down").style.backgroundColor = "#01FEFF"
 
   var x = document.querySelectorAll(".black");
   var i;
