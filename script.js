@@ -31,7 +31,7 @@ document.querySelector(".light").addEventListener("click", function() {
   document.querySelector(".p1").style.fontWeight = "600"
   document.querySelector(".p2").style.fontWeight = "600"
   document.querySelector(".s-icon").style.color = "#01FEFF"
-
+  document.querySelector(".down").style.borderColor = "#01FEFF"
 
   var x = document.querySelectorAll(".black");
   var i;
@@ -73,3 +73,6 @@ document.querySelector(".light").addEventListener("click", function() {
   }
 
 });
+
+
+
