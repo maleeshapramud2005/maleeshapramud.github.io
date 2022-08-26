@@ -452,7 +452,7 @@ a {
 
 .crd{
   height: 60vh;
-  width: 60vh;
+  width: 30vw;
   background: #F8A516;
   border-radius: 20px;
   display: grid;
@@ -462,7 +462,7 @@ a {
   content: "";
   position: absolute;
   height: 59.3vh;
-  width: 60vh;
+  width: 30vw;
   background: gray;
   border-radius: 20px;
   transform: translateY(0.7vh);
@@ -497,6 +497,7 @@ a {
   z-index: 2;
   border: 5px solid gray;
 }
+
 .dot{
   content: "";
   position: absolute;
@@ -510,7 +511,7 @@ a {
 }
 .crd-heading{
   color: white;
-  font-size: 2.5rem;
+  font-size: calc((2.2 - 1) * 1.2vw + 1.3rem);
   z-index: 4;
   position: relative;
 }
