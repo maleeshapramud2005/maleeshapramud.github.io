@@ -34,6 +34,7 @@ document.querySelector(".light").addEventListener("click", function() {
   document.querySelector(".down").style.borderColor = "#01FEFF"
   document.querySelector(".down").style.backgroundColor = "#01FEFF"
   document.body.style.backgroundImage = "url('bglight.jpg')"
+  
 
   var x = document.querySelectorAll(".black");
   var i;
