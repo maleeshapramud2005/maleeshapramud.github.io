@@ -27,20 +27,124 @@ body {
     text-align: center;
 }
 .fs-1 {
-    font-size: calc(1.375rem + 1.5vw)
+    font-size: calc(1.375rem + 1.5vw);
 }
 .fs-2 {
-    font-size: calc(1.325rem + 0.9vw)
+    font-size: calc(1.325rem + 0.9vw);
 }.fs-3 {
-    font-size: calc(1.3rem + 0.6vw)
+    font-size: calc(1.3rem + 0.6vw);
 }.fs-4 {
-    font-size: calc(1.275rem + 0.3vw)
+    font-size: calc(1.275rem + 0.3vw);
 }.fs-5 {
     font-size: 1.25rem;
 }
 .fs-6 {
     font-size: 1rem;
 }
+.fs-6c {
+  font-size: calc(0.7rem + 0.3vw);
+}
+
+
+/* Light/Dark Mode Toggle */
+.wrapper {
+  float: right;
+  padding: 5px;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 100;
+}
+.fa-moon {
+  color: #f1c40f;
+}
+.fa-sun {
+  color: #f39c12;
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+.checkbox-label {
+  background-color: rgb(124, 122, 122);
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: px;
+  top: px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+.checkbox:checked + .checkbox-label .ball {
+  transform:translateX(28px);
+}
+
+/* Light Mode Changes */
+body.light {
+  background-color: white;
+  background-image: url(bglight.jpg);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  font-size: 1em;
+}
+body.light .header-2 {
+  color: #01FEFF;
+  text-shadow: 4px 2px #ff0000b6;
+}
+body.light .header-2 .green {
+  text-shadow: none;
+}
+body.light .header-2 .red {
+  text-shadow: none;
+  color: rgba(0, 0, 255, 0.61);
+}
+body.light .p1, .p2 {
+  font-weight: 600;
+}
+body.light .s-icon {
+  color: #01FEFF;
+}
+body.light .down {
+  border-color: #01FEFF;
+  background-color: #01FEFF;
+}
+body.light .two_choices {
+  backdrop-filter: blur(4px) saturate(180%);
+  -webkit-backdrop-filter: blur(4px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  color: rgb(105, 105, 105);
+  box-shadow: 3px 4px 4px black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .lead {
     font-size: 1.25rem;
     font-weight: 300;
@@ -265,51 +369,44 @@ a {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.474);
+    background-color: rgba(44, 44, 44, 0.474);
 }
 .two_choices {
     position: fixed;
     left: 50%;
     top: 50%;
-    border-radius: 30px;
-    background-color: white;
     transform: translate(-50%, -50%);
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 40px;
     padding-bottom: 40px;
     box-shadow: 3px 4px 8px 3px black;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    color: white;
 }
 .line {
-    background-color: black;
+    background-color: whitesmoke;
     width: 100%;
     margin-top: 30px;
     margin-bottom: 30px;
     height: 5px;
 }
 
-.light {
+.wts {
     margin-bottom: 10px;
-    font-size: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
+    font-size: calc(0.7rem + 0.7vw);
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    border: 3px solid black;
-    background: none;
-    border-radius: 5px;
-}
-.dark {
-    margin-bottom: 10px;
-    font-size: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background: black;
+    border: 3px solid #4ABDAC;
+    background: #4ABDAC;
+    border-radius: 50px;
     color: white;
-    border: 3px solid black;
-    border-radius: 5px;
 }
 
 #home {
@@ -484,10 +581,12 @@ a {
   margin-top: 1vh;
   display: flex;
   justify-content: space-evenly;
+  width: 100vw;
 }
 .allcrd{
   display: grid;
   place-items: center;
+  width: 30vw;
 }
 .profilepic{
   height: 15vh;
