@@ -1,84 +1,141 @@
-function choice() {
-  document.querySelector(".choice").style.display = "block";
+// Scroll Animation
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    })
+})
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));
+
+
+// Letter Show And Hide
+var btn = document.getElementById('email-icon');
+btn1 = document.getElementById('email-icon2');
+btn2 = document.getElementById('letter-close');
+letter = document.getElementById('letter');
+
+let btnsArray = [btn, btn1];
+
+btnsArray.forEach(btnn => {
+    btnn.addEventListener('click', function () {
+
+        if (letter.classList.contains('d-none')) {
+            letter.classList.remove('d-none');
+            setTimeout(function () {
+                letter.classList.remove('visuallyhidden');
+            }, 20);
+        } else {
+            letter.classList.add('visuallyhidden');
+            letter.addEventListener('transitionend', function (e) {
+                letter.classList.add('d-none');
+            }, {
+                capture: false,
+                once: true,
+                passive: false
+            });
+        }
+
+    }, false);
+})
+
+btn2.addEventListener('click', function () {
+
+    letter.classList.add('visuallyhidden');
+    letter.addEventListener('transitionend', function (e) {
+        letter.classList.add('d-none');
+    }, {
+        capture: false,
+        once: true,
+        passive: false
+    });
+
+
+}, false);
+
+
+var btnc = document.getElementById('code-icon');
+btnc1 = document.getElementById('code-icon2');
+btnc2 = document.getElementById('back-btn');
+code = document.getElementById('code');
+left = document.getElementById('left');
+right = document.getElementById('right');
+container = document.getElementById('container');
+paragraph = document.getElementById('code-paragraph');
+
+
+let btnscArray = [btnc, btnc1];
+
+btnscArray.forEach(btnnc => {
+    btnnc.addEventListener('click', function () {
+
+        if (code.classList.contains('d-none')) {
+            code.classList.remove('d-none');
+            setTimeout(function () {
+                container.style.overflowX = "hidden";
+                container.style.height = "100vh";
+                code.classList.remove('visuallyhidden');
+                left.classList.remove('left-before');
+                right.classList.remove('right-before');
+                setTimeout(function () {
+                    paragraph.classList.remove('visuallyhidden');
+                }, 1900);
+            }, 20);
+        } else {
+            paragraph.classList.add('visuallyhidden');
+            code.classList.add('visuallyhidden');
+            code.addEventListener('transitionend', function (e) {
+                code.classList.add('d-none');
+            }, {
+                capture: false,
+                once: true,
+                passive: false
+            });
+        }
+
+    }, false);
+})
+
+btnc2.addEventListener('click', function () {
+
+    // code.classList.add('visuallyhidden');
+    paragraph.classList.add('visuallyhidden');
+    setTimeout(function () {
+        left.classList.add('left-before');
+        right.classList.add('right-before');
+        code.addEventListener('transitionend', function (e) {
+            setTimeout(function () {
+                code.classList.add('d-none');
+                container.style.overflowX = "visible";
+                container.style.height = "auto";
+            }, 1500);
+        }, {
+            capture: false,
+            once: true,
+            passive: false
+        });
+    }, 1200);
+
+
+}, false);
+
+
+
+
+
+
+// Custome Cursor
+const cursor = document.getElementById('cursor');
+
+const moveCursor = (e) => {
+    const mouseY = e.clientY;
+    const mouseX = e.clientX;
+
+    cursor.style.transform = "translate3d($[mouseX]px, $[mouseY]px, 0)";
 }
-
-var d = document.querySelector("#date span");
-var greetings;
-var hours = new Date().getHours();
-var mins = new Date().getMinutes();
-if (hours < 12) {
-  greetings = "Good Morning"
-}
-else {
-  greetings = "Good Evening"
-}
-d.innerHTML = greetings;
-document.querySelector("#hours").innerHTML = hours;
-document.querySelector("#mins").innerHTML = mins;
-
-
-// document.querySelector(".dark").addEventListener("click", function() {
-//   document.querySelector(".choice").style.display = "none";
-// });
-// document.querySelector(".light").addEventListener("click", function() {
-//   document.querySelector(".choice").style.display = "none";
-//   document.querySelector("body").style.backgroundColor = "white";
-//   document.querySelector(".header-2").style.color = "#01FEFF"
-//   document.querySelector(".header-2").style.textShadow = "4px 2px #ff0000b6";
-//   document.querySelector(".header-2 .green").style.textShadow = "none";
-//   document.querySelector(".header-2 .red").style.textShadow = "none";
-//   document.querySelector(".header-2 .red").style.color = "rgba(0, 0, 255, 0.61)"
-//   document.querySelector(".p1").style.fontWeight = "600"
-//   document.querySelector(".p2").style.fontWeight = "600"
-//   document.querySelector(".s-icon").style.color = "#01FEFF"
-//   document.querySelector(".down").style.borderColor = "#01FEFF"
-//   document.querySelector(".down").style.backgroundColor = "#01FEFF"
-//   document.body.style.backgroundImage = "url('bglight.jpg')"
-  
-
-//   var x = document.querySelectorAll(".black");
-//   var i;
-//   for (i=0; i < x.length; i++) {
-//     x[i].style.color = "white";
-//   }
-//   var purple = document.querySelectorAll(".purple");
-//   for (i=0; i < purple.length; i++) {
-//     purple[i].style.color = "#ECECEC";
-//   }
-//   var gray = document.querySelectorAll(".gray");
-//   for (i=0; i < gray.length; i++) {
-//     gray[i].style.color = "#F0ECE2";
-//   }
-//   var btn_purple = document.querySelectorAll(".btn-purple");
-//   for (i=0; i < btn_purple.length; i++) {
-//     btn_purple[i].style.backgroundColor = "#F2A365"
-//     btn_purple[i].style.boxShadow = "0px 5px 20px #F2A365";
-//   }
-//   var bg_light = document.querySelectorAll(".bg-white");
-//   for (i=0; i < bg_light.length; i++) {
-//     bg_light[i].style.backgroundColor = "#222831"
-//   }
-//   var purple_light = document.querySelectorAll(".purple-light");
-//   for (i=0; i < purple_light.length; i++) {
-//     purple_light[i].style.color = "#F0ECE2";
-//   }
-//   var box_shadow = document.querySelectorAll("#box_shadow");
-//   for (i=0; i < box_shadow.length; i++) {
-//     box_shadow[i].style.boxShadow = "1px 2px 8px 1px white"
-//   }
-//   var lead = document.querySelectorAll(".lead");
-//   for (i=0; i < lead.length; i++) {
-//     lead[i].style.color = "#F0ECE2";
-//   }
-//   var s_icon = document.querySelectorAll(".s-icon");
-//   for (i=0; i < s_icon.length; i++) {
-//     s_icon[i].style.color = "#01FEFF"
-//   }
-
-// });
-
-
-
-document.querySelector(".wts").addEventListener("click", function() {
-  document.querySelector(".choice").style.display = "none";
-});
+window.addEventListener('mousemove', moveCursor);
