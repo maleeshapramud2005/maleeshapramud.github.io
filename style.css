@@ -31,6 +31,10 @@ nav {
     padding: 25px 0 25px 0;
 }
 
+.email {
+    cursor: pointer;
+}
+
 /* Side Navigation Bar */
 .side-nav {
     position: absolute;
@@ -193,6 +197,10 @@ nav {
     .code-paragraph {
         min-width: 95%;
     }
+}
+
+a {
+    cursor: pointer;
 }
 
 
