@@ -126,28 +126,6 @@ btnc2.addEventListener('click', function () {
 
 
 
-// Locked Section
-var lockedBtn = document.getElementById('locked');
-locked = document.getElementById('lockedSection');
-
-lockedBtn.addEventListener('click', function() {
-
-    if (locked.classList.contains('d-none')) {
-        locked.classList.remove('d-none');
-        
-    } else {
-        locked.classList.add('visuallyhidden');
-        locked.addEventListener('transitionend', function (e) {
-            locked.classList.add('d-none');
-        }, {
-            capture: false,
-            once: true,
-            passive: false
-        });
-    }
-
-})
-
 
 
 
