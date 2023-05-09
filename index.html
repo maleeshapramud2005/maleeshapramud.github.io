@@ -21,7 +21,7 @@
     <div class="container" id="container">
         <div class="wrapper">
             <!-- Navigation Bar -->
-            <nav class="row">
+            <nav class="row nav-row">
                 <div>
                     <p class="email">maleeshapramud9@gmail.com</p>
                     <img src="mail.svg" class="email-icon" id="email-icon" alt="" />
@@ -35,7 +35,7 @@
             </nav>
 
             <!-- Side Navigation Bar -->
-            <div class="side-nav">
+            <div class="side-nav z-2">
                 <div>
                     <img src="mail.svg" class="side-nav-item" id="email-icon2" alt="" />
                 </div>
@@ -63,7 +63,7 @@
                 <p class="letter-signature">Maleesha</p>
             </div>
 
-            <!-- Code Section -->
+            <!-- About Section -->
             <div class="code-section d-none" id="code">
                 <div class="code-section-col-1 left-before" id="left">
                     <h1 class="float-right">Abou</h1>
@@ -98,13 +98,14 @@
             </div>
 
             <!-- Hero Section -->
+            <canvas id="canvas"></canvas>
             <div class="hero-section">
                 <div class="center">
-                    <div class="text-center w-100">
+                    <div class="text-center w-100 z-1">
                         <div>
                             <img src="hero.png" class="hero-img" alt="Hero-img" />
                         </div>
-                        <p class="hero-subheading">Hi, I'm Maleesha👋</p>
+                        <p class="hero-subheading">Hi, I'm Maleesha<span id="locked">👋</span></p>
                         <h1 class="hero-heading">Creative web designer bringing ideas to life with HTML, CSS, and JS.
                         </h1>
                         <a href="Maleesha Pramud CV.pdf">
@@ -114,7 +115,17 @@
                 </div>
             </div>
 
-            <!-- <img src="HTML.png" class="w-100" alt=""/> -->
+            <!-- Locked Section -->
+            <div class="locked-section d-none" id="lockedSection">
+                <p>Username: </p>
+                <input type="text" class="locked-input" placeholder="Chamath"/>
+                <p class="locked-p">Password: </p>
+                <input type="password" class="locked-input" placeholder="123"/>
+                <br/>
+                <button type="submit" class="btn-1 submit-btn mx-auto">Submit</button>
+            </div>
+
+            <!-- Banner Section -->
             <div class="banner">
                 <ul class="banner-ul">
                     <li class="banner-item">HTML</li>
@@ -126,6 +137,7 @@
                 </ul>
             </div>
 
+            <!-- Cards Section -->
             <div class="second-section">
                 <div class="">
                     <div>
@@ -152,7 +164,7 @@
                 </div>
             </div>
 
-            <!-- Third Section -->
+            <!-- Past Projects Section -->
             <div class="portfolio-section">
                 <h1 class="text-center third-heading">Past Projects</h1>
                 <div class="flex justify-evenly">
@@ -177,6 +189,7 @@
         integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
+    <script src="canvas.js"></script>
 </body>
 
 </html>
