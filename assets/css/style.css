@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
-    cursor: url(mouse-pointer.svg), auto;
+    cursor: url(/assets/icons/mouse-pointer.svg), auto;
 }
 
 .container {
@@ -340,7 +340,7 @@ a {
 
 
 .p-img-1 {
-    background-image: url(p1-l.webp);
+    background-image: url(/assets/images/p1-l.webp);
 }
 .p-img-1::before {
     content: '';
@@ -350,13 +350,13 @@ a {
     height: 330px;
     width: 200px;
     border-radius: 10px;
-    background-image: url(p1-s.webp);
+    background-image: url(/assets/images/p1-s.webp);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-size: cover;
 }
 
 .p-img-2 {
-    background-image: url(p2-l.webp);
+    background-image: url(/assets/images/p2-l.webp);
 }
 .p-img-2::before {
     content: '';
@@ -366,13 +366,13 @@ a {
     height: 330px;
     width: 200px;
     border-radius: 10px;
-    background-image: url(p2-s.webp);
+    background-image: url(/assets/images/p2-s.webp);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-size: cover;
 }
 
 .p-img-3 {
-    background-image: url(p3-l.webp);
+    background-image: url(/assets/images/p3-l.webp);
 }
 .p-img-3::before {
     content: '';
@@ -382,13 +382,13 @@ a {
     height: 330px;
     width: 200px;
     border-radius: 10px;
-    background-image: url(p3-s.webp);
+    background-image: url(/assets/images/p3-s.webp);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-size: cover;
 }
 
 .p-img-4 {
-    background-image: url(p4-l.webp);
+    background-image: url(/assets/images/p4-l.webp);
 }
 .p-img-4::before {
     content: '';
@@ -398,7 +398,7 @@ a {
     height: 330px;
     width: 200px;
     border-radius: 10px;
-    background-image: url(p4-s.webp);
+    background-image: url(/assets/images/p4-s.webp);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-size: cover;
 }
